@@ -7,9 +7,9 @@ use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Responsable;
 use Illuminate\Support\Traits\Macroable;
 use JsonSerializable;
-use Maduser\Laravel\Support\Helpers\CSV;
 use Maduser\Laravel\Support\Traits\CallSettersTrait;
 use Maduser\Laravel\Support\Traits\ResponsableTrait;
+use Throwable;
 
 /**
  * Class ViewModel
@@ -41,16 +41,6 @@ class ViewModel implements Htmlable, Arrayable, Jsonable, JsonSerializable, Resp
     }
 
     /**
-     * The Array representation of this view model for CSV
-     *
-     * @return array
-     */
-    public function toCsv()
-    {
-        return CSV::create($this->toArray());
-    }
-
-    /**
      * The string representation of the view model
      *
      * @return string
@@ -58,10 +48,6 @@ class ViewModel implements Htmlable, Arrayable, Jsonable, JsonSerializable, Resp
      */
     public function __toString()
     {
-        dump('__toString');
         return $this->toHtml();
     }
-
-
-
 }
