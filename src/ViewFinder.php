@@ -11,8 +11,6 @@ use ReflectionException;
 /**
  * Class ViewFinder (unused at the moment)
  * @todo: working, but needs refactoring. a lot.
- *
- * @package Previon\Base\Views
  */
 class ViewFinder
 {
