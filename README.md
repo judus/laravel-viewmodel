@@ -1,4 +1,9 @@
-# maduser/laravel-support
+# maduser/laravel-viewmodel
+
+#### Get it with composer
+```bash
+composer require maduser/laravel-viewmodel
+```
 
 #### Example ViewModel
 ```php 
