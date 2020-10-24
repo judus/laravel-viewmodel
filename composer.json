@@ -1,0 +1,36 @@
+{
+    "name": "maduser/laravel-viewmodel",
+    "type": "project",
+    "description": "ViewModels for Laravel",
+    "keywords": [
+        "view model",
+        "laravel"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.1.3",
+        "maduser/laravel-support": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Maduser\\Laravel\\ViewModel\\": "src/"
+        },
+        "classmap": [
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Maduser\\Laravel\\ViewModel\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
