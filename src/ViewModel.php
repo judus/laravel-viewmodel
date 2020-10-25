@@ -14,7 +14,7 @@ use Throwable;
 /**
  * Class ViewModel
  *
- * @package Previon\Base\Views
+ * @package Maduser\Laravel\ViewModel
  */
 class ViewModel implements Htmlable, Arrayable, Jsonable, JsonSerializable, Responsable
 {
