@@ -4,13 +4,15 @@ namespace Maduser\Laravel\ViewModel;
 
 use Closure;
 use Illuminate\Contracts\Filesystem\FileNotFoundException;
+use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\App;
 use ReflectionClass;
 use ReflectionException;
 
 /**
- * Class ViewFinder (unused at the moment)
- * @todo: working, but needs refactoring. a lot.
+ * Class ViewFinder
+ *
+ * @package Previon\Base\Views
  */
 class ViewFinder
 {
@@ -202,10 +204,9 @@ class ViewFinder
     {
         if (!$this->directoryAliases) {
 
-            $hints = collect(config('view-model.view.hints'));
+            $hints = collect(config('viewmodel.view.hints'));
 
-            $this->directoryAliases =
-                $hints->sortBy('priority', SORT_REGULAR, true)->keys()->toArray();
+            $this->directoryAliases = $hints->sortBy('priority', SORT_REGULAR, true)->keys()->toArray();
         }
 
         return $this->directoryAliases;

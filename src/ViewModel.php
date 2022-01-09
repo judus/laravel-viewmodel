@@ -5,8 +5,10 @@ use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Contracts\Support\Jsonable;
 use Illuminate\Contracts\Support\Responsable;
+use Illuminate\Support\HtmlString;
 use Illuminate\Support\Traits\Macroable;
 use JsonSerializable;
+use Maduser\Generic\Traits\SelfAwareClass;
 use Maduser\Laravel\Support\Traits\CallSettersTrait;
 use Maduser\Laravel\Support\Traits\ResponsableTrait;
 use Throwable;
@@ -21,6 +23,7 @@ class ViewModel implements Htmlable, Arrayable, Jsonable, JsonSerializable, Resp
     use CallSettersTrait;
     use Macroable;
     use ResponsableTrait;
+    use SelfAwareClass;
 
     protected $ignore = ['macros'];
 
@@ -35,9 +38,7 @@ class ViewModel implements Htmlable, Arrayable, Jsonable, JsonSerializable, Resp
      */
     public static function create(array $properties = [], string $view = null): ViewModel
     {
-        /** @var ViewModel $viewModel */
-        $viewModel = app(static::class);
-        return $viewModel->view($view)->callSetters($properties);
+        return app(static::class)->view($view)->callSetters($properties);
     }
 
     /**
@@ -46,8 +47,8 @@ class ViewModel implements Htmlable, Arrayable, Jsonable, JsonSerializable, Resp
      * @return string
      * @throws Throwable
      */
-    public function __toString()
-    {
-        return $this->toHtml();
-    }
+//    public function __toString()
+//    {
+//        return $this->toHtml();
+//    }
 }
