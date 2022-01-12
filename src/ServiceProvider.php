@@ -15,7 +15,6 @@ class ServiceProvider extends LaravelServiceProvider {
      */
     public function boot()
     {
-
         ViewModel::macro('toCsv', function() {
             return CSV::create($this->toArray());
         });

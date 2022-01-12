@@ -11,8 +11,6 @@ use ReflectionException;
 
 /**
  * Class ViewFinder
- *
- * @package Previon\Base\Views
  */
 class ViewFinder
 {
@@ -112,9 +110,6 @@ class ViewFinder
     }
 
     /**
-     *
-     * @todo $this->getInputType() can't be here!!
-     *
      * @return string
      */
     public function getView(): string
@@ -425,8 +420,6 @@ class ViewFinder
         $view = $this->getTemplate();
 
         // TODO: implement different behaviors for 'local' and 'production'
-        // Somehow our app is never in 'local' mode, even if it is defined as
-        // such in our .env file.
          if (! App::isLocal() ) {
              return $callable($view, $this->getExposedAs());
          }

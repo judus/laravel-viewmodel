@@ -15,8 +15,6 @@ use Throwable;
 
 /**
  * Class ViewModel
- *
- * @package Previon\Base\Views
  */
 class ViewModel implements Htmlable, Arrayable, Jsonable, JsonSerializable, Responsable
 {

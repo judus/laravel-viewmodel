@@ -46,7 +46,7 @@ class RenderableCollection extends ViewCollection
      *
      * @return Container
      */
-    public function setWrapper(string $wrapper): Container
+    public function setWrapper(string $wrapper): RenderableCollection
     {
         $this->wrapper = $wrapper;
 
@@ -58,7 +58,7 @@ class RenderableCollection extends ViewCollection
      *
      * @return Container
      */
-    public function setShouldWrap(bool $shouldWrap): Container
+    public function setShouldWrap(bool $shouldWrap): RenderableCollection
     {
         $this->shouldWrap = $shouldWrap;
 
@@ -70,7 +70,7 @@ class RenderableCollection extends ViewCollection
      *
      * @return Container
      */
-    public function setAttributes(array $attributes): Container
+    public function setAttributes(array $attributes): RenderableCollection
     {
         $this->attributes = $attributes;
 
@@ -82,7 +82,7 @@ class RenderableCollection extends ViewCollection
      *
      * @return Container
      */
-    public function setItemWrapper(string $itemWrapper): Container
+    public function setItemWrapper(string $itemWrapper): RenderableCollection
     {
         $this->itemWrapper = $itemWrapper;
 
@@ -94,7 +94,7 @@ class RenderableCollection extends ViewCollection
      *
      * @return Container
      */
-    public function setShouldWrapItems(bool $shouldWrapItems): Container
+    public function setShouldWrapItems(bool $shouldWrapItems): RenderableCollection
     {
         $this->shouldWrapItems = $shouldWrapItems;
 
@@ -106,7 +106,7 @@ class RenderableCollection extends ViewCollection
      *
      * @return Container
      */
-    public function setItemAttributes(array $itemAttributes): Container
+    public function setItemAttributes(array $itemAttributes): RenderableCollection
     {
         $this->itemAttributes = $itemAttributes;
 
