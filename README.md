@@ -47,7 +47,7 @@ class MyQuoteWidget extends ViewModel
 #### Example template my-widget.blade.php
 ```html
 <div class="widget quote">
-    <p>{{ $view->getTitle() }}</p>
+    <p>{{ $view->getQuote() }}</p>
 </div>
 ```
 
