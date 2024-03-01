@@ -88,7 +88,12 @@ To add more acceptable content types (for example pdf), use ViewModel::macro() i
 - **toArray():** Returns an array representation of the ViewModel, useful for formating the structure of the JSON responses.
 - **toJson():** Returns a JSON string representation of the ViewModel.
 
+#### Nesting ViewModels
+With the ViewModel ability to dynamically set properties, and its capacity to represent its data as an array, you can create nested structures
 
-## Conclusion
-Using ViewModels in Laravel applications can greatly improve the structure and clarity of your code, making it easier to maintain and extend. This package provides a straightforward and flexible way to implement ViewModels, enhancing the separation of concerns within your MVC architecture.
-
+```php
+$userWidget = UserWidget::create([
+    'profile' => UserProfile::create(),
+    'activity' => UserActivity::create(['activities' => $user->activities])
+]);
+```
