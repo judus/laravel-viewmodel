@@ -1,5 +1,7 @@
 # maduser/laravel-viewmodel
 
+A long time ago, in a galaxy far away... Laravel did not have view components. This is how old this solution is. Still a valid approach, although no longer the Laravel way.
+
 The **maduser/laravel-viewmodel** package provides an elegant way to encapsulate data and logic needed for views in Laravel applications, promoting clean separation of concerns and reusable code. By using ViewModels, you can simplify your controllers and views, making your codebase more maintainable and understandable.
 
 ## Features
@@ -89,8 +91,7 @@ To add more acceptable content types (for example pdf), use ViewModel::macro() i
 - **toJson():** Returns a JSON string representation of the ViewModel.
 
 #### Nesting ViewModels
-With the ViewModel ability to dynamically set properties, and its capacity to represent its data as an array, you can create nested structures
-
+That is totally doable...
 ```php
 $userWidget = UserWidget::create([
     'profile' => UserProfile::create(),
